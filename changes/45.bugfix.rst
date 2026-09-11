@@ -1,0 +1,2 @@
+Include rerun tests in the summary when pytest is run with the ``-ra`` or
+``-rA`` report character settings.

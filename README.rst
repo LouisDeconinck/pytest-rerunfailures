@@ -298,7 +298,7 @@ Output
 ------
 
 Here's an example of the output provided by the plugin when run with
-``--reruns 2`` and ``-r aR``::
+``--reruns 2`` and ``-r a``::
 
   test_report.py RRF
 
@@ -319,6 +319,8 @@ Here's an example of the output provided by the plugin when run with
 
 Note that output will show all re-runs. Tests that fail on all the re-runs will
 be marked as failed.
+
+The ``a`` and ``A`` report characters include the rerun summary automatically.
 
 .. START-COMPATIBILITY
 

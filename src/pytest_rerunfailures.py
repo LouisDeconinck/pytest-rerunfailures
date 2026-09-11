@@ -1305,7 +1305,8 @@ def pytest_terminal_summary(terminalreporter):
     # Adapted from https://pytest.org/latest/_modules/_pytest/skipping.html
     tr = terminalreporter
     show_tracebacks = tr.config.getoption("rerun_show_tracebacks", False)
-    if not show_tracebacks and not any(c in "rR" for c in tr.reportchars):
+    reportchars = tr.config.getoption("reportchars")
+    if not show_tracebacks and not any(c in "aArR" for c in reportchars):
         return
 
     lines = show_rerun(terminalreporter, show_tracebacks=show_tracebacks)

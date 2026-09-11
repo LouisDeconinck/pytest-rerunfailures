@@ -532,7 +532,7 @@ def test_extra_test_summary_for_reruns(testdir):
         def test_pass():
             {temporary_failure()}"""
     )
-    result = testdir.runpytest("--reruns", "1", "-r", "R")
+    result = testdir.runpytest("--reruns", "1", "-r", "a")
     result.stdout.fnmatch_lines_random(["RERUN test_*:*"])
     assert "1 rerun" in result.stdout.str()
 
